@@ -8,6 +8,9 @@ $(function(){
     console.log(inputString);
     splitArray = inputString.match(/[a-z]+/gi);
     console.log(splitArray);
+    splitArray.sort(function(a, b){
+      return a.toLowerCase().localeCompare(b.toLowerCase());
+    });
 
     var wordCount = splitArray.reduce(function(allWords, word){
       if(word in allWords){
