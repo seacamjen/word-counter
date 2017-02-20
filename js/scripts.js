@@ -18,5 +18,11 @@ $(function(){
       return allWords;
     }, {});
     console.log(wordCount);
+
+    for(var key in wordCount){
+      if(wordCount.hasOwnProperty(key)){
+        $("#results").append("<li>" + key + ": " + wordCount[key] + "</li>");
+      }
+    }
   });
 });
